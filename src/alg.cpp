@@ -41,8 +41,13 @@ uint64_t nextPrime(uint64_t value) {
 }
 
 uint64_t sumPrime(uint64_t hbound) {
-  // вставьте код функции
-  return 2;
+	int psum = 0;
+	for (int i = 2; i < hbound; i++)
+	{
+		if (checkPrime(i))
+			psum += i;
+	}
+	return psum;
 }
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
