@@ -51,6 +51,11 @@ uint64_t sumPrime(uint64_t hbound) {
 }
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
-  // вставьте код функции
-  return 1;
+	int twinp_count = 0;
+	for (int i = lbound; i < hbound; i++)
+	{
+		if (checkPrime(i) && checkPrime(i+2) && (i+2) < hbound)
+			twinp_count++;
+	}
+	return twinp_count;
 }
